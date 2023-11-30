@@ -9,10 +9,10 @@ import requests
 All requests to the LLM require some form of a key.
 Other sensitive data has also been hidden through environment variables.
 """
-api_key = os.environ['open_ai_key']
-base_url = os.environ['open_ai_base']
-deployment = os.environ['open_ai_deployment']
-version = os.environ['open_ai_version']
+api_key = os.environ['OPENAI_AIPI_KEY']
+base_url = os.environ['OPENAI_API_BASE']
+deployment = os.environ['OPENAI_API_DEPLOYMENT']
+version = os.environ['OPENAI_API_VERSION']
 """
 This function sends an HTTP request to an LLM which will prompt it for some
 generic response. The function will return the response JSON. The URL used here has
