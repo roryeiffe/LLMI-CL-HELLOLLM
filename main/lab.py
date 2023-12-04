@@ -9,7 +9,7 @@ import requests
 All requests to the LLM require some form of a key.
 Other sensitive data has also been hidden through environment variables.
 """
-api_key = os.environ['OPENAI_AIPI_KEY']
+api_key = os.environ['OPENAI_API_KEY']
 base_url = os.environ['OPENAI_API_BASE']
 deployment = os.environ['OPENAI_API_DEPLOYMENT']
 version = os.environ['OPENAI_API_VERSION']
