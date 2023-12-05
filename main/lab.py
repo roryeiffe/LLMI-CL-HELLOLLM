@@ -32,7 +32,7 @@ Let's also take a look at what else is provided here.
 An API call to any other LLM may be slightly different.
 """
 def sample() :
-    res = requests.post(f"{base_url}/openai/deployments/{deployment}/chat/completions?api-version={version}",
+    res = requests.post(f"{base_url}/deployments/{deployment}/chat/completions?api-version={version}",
                         headers={
                             "Content-Type": "application/json",
                             "api-key": f"{api_key}"
