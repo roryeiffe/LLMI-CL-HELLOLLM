@@ -11,7 +11,7 @@ Other sensitive data has also been hidden through environment variables.
 """
 api_key = os.environ['OPENAI_API_KEY']
 base_url = os.environ['OPENAI_API_BASE']
-deployment = os.environ['OPENAI_API_DEPLOYMENT']
+deployment = os.environ['DEPLOYMENT_NAME']
 version = os.environ['OPENAI_API_VERSION']
 """
 This function sends an HTTP request to an LLM which will prompt it for some
