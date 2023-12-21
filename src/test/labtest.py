@@ -3,11 +3,11 @@ This file will contain test cases for the automatic evaluation of your
 solution in main/lab.py. You should not modify the code in this file. You should
 also manually test your solution by running main/app.py.
 """
+import os
 import unittest
 import requests
 
-from main.lab import sample
-from main.lab import lab
+from src.main.lab import sample, lab1, lab2
 
 
 class TestLLMResponse(unittest.TestCase):
@@ -23,17 +23,17 @@ class TestLLMResponse(unittest.TestCase):
         self.assertTrue(result.status_code == 200)
 
     """
-    The variable returned from the lab method should be an HTTP response, with a status
+    The variable returned from the lab1 method should be an HTTP response, with a status
     200. If the status is 400, then your request was incorrectly formatted.
     """
 
-    def test_lab_200_response(self):
+    def test_lab1_200_response(self):
         result = lab()
         self.assertIsInstance(result, requests.models.Response)
         self.assertTrue(result.status_code == 200)
 
     """
-    The JSON of the response returned from the lab method should contain "hello world"
+    The JSON of the response returned from the lab1 method should contain "hello world"
     (not case or punctuation sensitive.)
     """
 
@@ -43,6 +43,10 @@ class TestLLMResponse(unittest.TestCase):
         self.assertIn("hello", result)  # Verifies if "hello" is present in the result
         self.assertIn("world", result)  # Verifies if "world" is present in the result
 
+    """
+        The variable returned from the lab1 method should be an HTTP response, with a status
+        200. If the status is 400, then your request was incorrectly formatted.
+        """
 
 if __name__ == '__main__':
     unittest.main()

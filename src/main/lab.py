@@ -5,6 +5,7 @@ API yourself. It should be very similar to the provided example.
 """
 import os
 import requests
+
 """
 All requests to the LLM require some form of a key.
 Other sensitive data has also been hidden through environment variables.
@@ -31,8 +32,10 @@ Let's also take a look at what else is provided here.
         
 An API call to any other LLM may be slightly different.
 """
-def sample() :
-    res = requests.post(f"{base_url}/deployments/{deployment}/chat/completions?api-version={version}",
+
+
+def sample():
+    res = requests.post(f"{base_url}/chat/completions?api-version={version}",
                         headers={
                             "Content-Type": "application/json",
                             "api-key": f"{api_key}"
@@ -40,11 +43,12 @@ def sample() :
                         json={
                             "messages": [
                                 {"role": "system",
-                                 "content":"The LLM recieves an array of message objects, containing the message's "
-                                           "chat content and the actor who sent it."},
+                                 "content": "The LLM recieves an array of message objects, containing the message's "
+                                            "chat content and the actor who sent it."},
                                 {"role": "user",
-                                 "content":"Content from 'user' are effectively the prompts sent by the human."}],
+                                 "content": "Content from 'user' are effectively the prompts sent by the human."}],
                         })
+    print(res)
     return res
 
 
@@ -53,5 +57,7 @@ TODO: Within this function, send a request using the same URL & API key as above
 where the user prompts the LLM to produce a hello world response, and return the resulting response. 
 Test cases will verify that the LLM has actually produced some text containing "hello world".
 """
-def lab() :
+
+
+def lab():
     return "todo"
