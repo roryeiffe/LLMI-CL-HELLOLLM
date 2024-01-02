@@ -7,7 +7,7 @@ import os
 import unittest
 import requests
 
-from src.main.lab import sample, lab1, lab2
+from src.main.lab import sample, lab
 
 
 class TestLLMResponse(unittest.TestCase):
@@ -47,6 +47,7 @@ class TestLLMResponse(unittest.TestCase):
         The variable returned from the lab1 method should be an HTTP response, with a status
         200. If the status is 400, then your request was incorrectly formatted.
         """
+
 
 if __name__ == '__main__':
     unittest.main()

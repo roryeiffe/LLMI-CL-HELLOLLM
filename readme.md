@@ -8,9 +8,9 @@ You may modify lab.py, which is provided for manual testing.
 You should not modify labtest.py. You must pass all test cases provided in labtest.py
 to pass the lab.
 
-# ChatGPT
-This lab leverages an external connection to ChatGPT. It is possible that it may become
-inaccessible due to an invalid API key or the service being unavailable. You can check
-this by running the sanity_test test case in the labtest.py test class. The environment
-variables you should use for the connection should either be automatically configured
-for you upon opening the lab, or will be explicitly provided.
+# HuggingFace
+This lab leverages an external connection to the HuggingFace text generation interface. 
+It is possible that it may become inaccessible due to an invalid API key or the 
+service being unavailable. You can check this by running the sanity_test test case in the 
+labtest.py test class. The environment variables you should use for the connection should 
+either be automatically configured for you upon opening the lab, or will be explicitly provided.
