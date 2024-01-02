@@ -57,17 +57,4 @@ Test cases will verify that the LLM has actually produced some text containing "
 
 
 def lab():
-    res = requests.post(f"{base_url}",
-                        headers={
-                            "Content-Type": "application/json",
-                            "Authorization": f"Bearer {api_key}"
-                        },
-                        json={
-                            "inputs": "Produce the output 'hello world'.",
-                            "parameters": {
-                                "max_new_tokens": 400,
-                                "temperature": 1
-                            }
-                        })
-    print(res)
-    return res
+    return "todo"
