@@ -10,7 +10,7 @@ import requests
 All requests to the LLM require some form of a key.
 Other sensitive data has also been hidden through environment variables.
 """
-base_url = os.environ['HF_ENDPOINT']
+base_url = os.environ['LLM_ENDPOINT']
 api_key = os.environ['HF_TOKEN']
 """
 This function sends an HTTP request to an LLM which will prompt it for some
